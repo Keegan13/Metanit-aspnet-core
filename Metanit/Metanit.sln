@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCore_2.22", "AspNetCo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCore_2.4", "AspNetCore_2.4\AspNetCore_2.4.csproj", "{8F5E171D-94F1-4CFB-ACB8-96B6170EC540}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCore_2.18", "AspNetCore_2.18\AspNetCore_2.18.csproj", "{EE524C39-3A27-4C18-96D6-7CED08CC6320}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{8F5E171D-94F1-4CFB-ACB8-96B6170EC540}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8F5E171D-94F1-4CFB-ACB8-96B6170EC540}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8F5E171D-94F1-4CFB-ACB8-96B6170EC540}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE524C39-3A27-4C18-96D6-7CED08CC6320}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE524C39-3A27-4C18-96D6-7CED08CC6320}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE524C39-3A27-4C18-96D6-7CED08CC6320}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE524C39-3A27-4C18-96D6-7CED08CC6320}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
