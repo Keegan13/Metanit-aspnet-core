@@ -1,0 +1,31 @@
+Processing request /
+Processing request /favicon.ico
+Processing request /
+24.11.2018 19:58:22 Processing request / from localhost:5000
+24.11.2018 19:58:22 Processing request /favicon.ico from localhost:5000
+24.11.2018 19:58:24 Processing request / from localhost:5000
+24.11.2018 19:58:24 Processing request /favicon.ico from localhost:5000
+24.11.2018 19:58:30 Processing request /fsdfsdfsd from localhost:5000
+24.11.2018 19:58:30 Processing request /favicon.ico from localhost:5000
+24.11.2018 19:58:36 Processing request /Home/Index from localhost:5000
+24.11.2018 19:58:36 Processing request /favicon.ico from localhost:5000
+24.11.2018 23:24:31 Processing request / from localhost:5000
+24.11.2018 23:24:31 Processing request /favicon.ico from localhost:5000
+24.11.2018 23:24:33 Processing request / from localhost:5000
+24.11.2018 23:24:33 Processing request /favicon.ico from localhost:5000
+24.11.2018 23:24:34 Processing request / from localhost:5000
+24.11.2018 23:24:34 Processing request /favicon.ico from localhost:5000
+24.11.2018 23:24:34 Processing request / from localhost:5000
+24.11.2018 23:24:34 Processing request /favicon.ico from localhost:5000
+24.11.2018 23:24:34 Processing request / from localhost:5000
+24.11.2018 23:24:34 Processing request /favicon.ico from localhost:5000
+24.11.2018 23:24:35 Processing request / from localhost:5000
+24.11.2018 23:24:35 Processing request /favicon.ico from localhost:5000
+24.11.2018 23:24:35 Processing request / from localhost:5000
+24.11.2018 23:24:35 Processing request /favicon.ico from localhost:5000
+24.11.2018 23:24:35 Processing request / from localhost:5000
+24.11.2018 23:24:35 Processing request /favicon.ico from localhost:5000
+24.11.2018 23:24:35 Processing request / from localhost:5000
+24.11.2018 23:24:35 Processing request /favicon.ico from localhost:5000
+24.11.2018 23:26:16 Processing request / from localhost:5000
+24.11.2018 23:26:16 Processing request /favicon.ico from localhost:5000

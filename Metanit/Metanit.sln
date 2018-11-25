@@ -3,13 +3,23 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2048
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCore_2.3", "AspNetCore_2.3\AspNetCore_2.3.csproj", "{E23490C5-66B1-4B01-8E2B-BBF9B9871A72}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore_2.3", "AspNetCore_2.3\AspNetCore_2.3.csproj", "{E23490C5-66B1-4B01-8E2B-BBF9B9871A72}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCore_2.22", "AspNetCore_2.22\AspNetCore_2.22.csproj", "{AE3F8583-1E96-40D5-8762-218A84493D53}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore_2.22", "AspNetCore_2.22\AspNetCore_2.22.csproj", "{AE3F8583-1E96-40D5-8762-218A84493D53}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCore_2.4", "AspNetCore_2.4\AspNetCore_2.4.csproj", "{8F5E171D-94F1-4CFB-ACB8-96B6170EC540}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore_2.4", "AspNetCore_2.4\AspNetCore_2.4.csproj", "{8F5E171D-94F1-4CFB-ACB8-96B6170EC540}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCore_2.18", "AspNetCore_2.18\AspNetCore_2.18.csproj", "{EE524C39-3A27-4C18-96D6-7CED08CC6320}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore_2.18", "AspNetCore_2.18\AspNetCore_2.18.csproj", "{EE524C39-3A27-4C18-96D6-7CED08CC6320}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore_2.5", "AspNetCore_2.5\AspNetCore_2.5.csproj", "{31A264DF-2F11-4BA0-ABCD-AD7A2D7FCABB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore_2.8", "AspNetCore_2.8\AspNetCore_2.8.csproj", "{2320690E-AB13-4534-98E3-930C3D53F5A6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore_2.10", "AspNetCore_2.10\AspNetCore_2.10.csproj", "{3D1545E1-F149-4BC8-B061-D1F2B12E362D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSharp_11.4", "CSharp_11.4\CSharp_11.4.csproj", "{CF5F5268-74C8-44BE-A33B-0C369430E88F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCore_2.11", "AspNetCore_2.11\AspNetCore_2.11.csproj", "{3446CAA9-59B5-45FF-95EF-43CF20A1A983}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +43,26 @@ Global
 		{EE524C39-3A27-4C18-96D6-7CED08CC6320}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EE524C39-3A27-4C18-96D6-7CED08CC6320}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EE524C39-3A27-4C18-96D6-7CED08CC6320}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31A264DF-2F11-4BA0-ABCD-AD7A2D7FCABB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31A264DF-2F11-4BA0-ABCD-AD7A2D7FCABB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31A264DF-2F11-4BA0-ABCD-AD7A2D7FCABB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31A264DF-2F11-4BA0-ABCD-AD7A2D7FCABB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2320690E-AB13-4534-98E3-930C3D53F5A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2320690E-AB13-4534-98E3-930C3D53F5A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2320690E-AB13-4534-98E3-930C3D53F5A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2320690E-AB13-4534-98E3-930C3D53F5A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D1545E1-F149-4BC8-B061-D1F2B12E362D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D1545E1-F149-4BC8-B061-D1F2B12E362D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D1545E1-F149-4BC8-B061-D1F2B12E362D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D1545E1-F149-4BC8-B061-D1F2B12E362D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF5F5268-74C8-44BE-A33B-0C369430E88F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF5F5268-74C8-44BE-A33B-0C369430E88F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF5F5268-74C8-44BE-A33B-0C369430E88F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF5F5268-74C8-44BE-A33B-0C369430E88F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3446CAA9-59B5-45FF-95EF-43CF20A1A983}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3446CAA9-59B5-45FF-95EF-43CF20A1A983}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3446CAA9-59B5-45FF-95EF-43CF20A1A983}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3446CAA9-59B5-45FF-95EF-43CF20A1A983}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
