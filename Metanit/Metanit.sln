@@ -19,7 +19,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore_2.10", "AspNetCo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSharp_11.4", "CSharp_11.4\CSharp_11.4.csproj", "{CF5F5268-74C8-44BE-A33B-0C369430E88F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCore_2.11", "AspNetCore_2.11\AspNetCore_2.11.csproj", "{3446CAA9-59B5-45FF-95EF-43CF20A1A983}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore_2.11", "AspNetCore_2.11\AspNetCore_2.11.csproj", "{3446CAA9-59B5-45FF-95EF-43CF20A1A983}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
