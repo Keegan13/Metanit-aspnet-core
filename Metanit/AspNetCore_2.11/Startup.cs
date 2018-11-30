@@ -97,7 +97,7 @@ namespace AspNetCore_2._11
                 if (!context.Session.Keys.Contains("OK"))
                 {
                     User u = new User() { id = 15, Name = "Keegan" };
-                    //context.Session.Set("key", u);
+                    context.Session.Set("key", u);
                     context.Session.SetString("OK", "OK");
                 }
 
@@ -123,9 +123,11 @@ namespace AspNetCore_2._11
             });
             app.Use(async (context, _next) => {
 
+                
                 User u=context.Session.Get<User>("key");
                 await _next();
-                await context.Response.WriteAsync(u.Name);
+                await context.Response.WriteAsync(u.Name+Environment.NewLine);
+                await context.Response.WriteAsync(context.Connection.Id+Environment.NewLine);
 
             });
 
@@ -137,6 +139,7 @@ namespace AspNetCore_2._11
             app.UseMvcWithDefaultRoute();
             #endregion
 
+            
             //app.Map("/cookies", _ =>
             //{
             //    _.Run((context) =>

@@ -1,0 +1,2 @@
+txt_config_key
+txt_config_value

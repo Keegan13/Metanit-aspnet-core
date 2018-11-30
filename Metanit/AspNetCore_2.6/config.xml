@@ -1,0 +1,4 @@
+<configuration>
+  <Source>XmlSource</Source>
+  <XmlOnlyField>XmlOnlyField_Value</XmlOnlyField>
+</configuration>
