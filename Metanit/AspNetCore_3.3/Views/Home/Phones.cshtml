@@ -1,0 +1,31 @@
+﻿@model IEnumerable<AspNetCore_3._3.Models.Phone>
+@{
+    ViewData["Title"] = "Phones";
+}
+
+<h2>Phones</h2>
+
+<table class="table-striped table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Manufacturer</th>
+            <th>Price</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td>@item.Model</td>
+            <td>@item.Company</td>
+            <td>@item.Price</td>
+            <td><a asp-action="Buy" asp-route-data="MyDataToSend" asp-route-id="@item.Id">Buy</a></td>
+        </tr>
+        }
+    </tbody>
+
+</table>
+
+

@@ -1,0 +1,45 @@
+﻿@model AspNetCore_3._3.Models.Order
+@{
+    ViewData["Title"] = "Buy";
+    Layout = "";
+}
+
+
+<h2>Buy</h2>
+
+<div>
+
+    <p>
+        You're about to buy phone @Model.Phone.Model (@Model.Phone.Company)
+    </p>
+    <p>Provide information below to complete purchase</p>
+
+</div>
+
+           
+<table>
+
+    <tr>
+        <td></td>
+    </tr>
+</table>
+<form method="post" class="form-control">
+
+
+    @Html.HiddenFor(x => x.PhoneId);
+    <div class="form-group">
+        @Html.LabelFor(x => x.User);
+        @Html.EditorFor(x => x.User);
+
+    </div>
+
+    <div class="form-group">
+        @Html.LabelFor(x => x.Address);
+        @Html.EditorFor(x => x.Address);
+
+    </div>
+    <div class="form-group">
+
+        <input type="submit" value="Buy (@Model.Phone.Price.ToString("F2"))" />
+    </div>
+</form>

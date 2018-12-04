@@ -1,14 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Routing;
+using Microsoft.AspNetCore.Routing.Constraints;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace AspNetCore_17._1
+namespace AspNetCore_11._3
 {
     public class Startup
     {
@@ -16,57 +17,38 @@ namespace AspNetCore_17._1
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc();
+            services.AddRouting();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
-            if (!env.IsDevelopment())
+            if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-                //app.UseExceptionHandler("/error.html");
-
-
             }
-            else
-            {
-                app.UseExceptionHandler("/error");
-            }
+            var builder = new RouteBuilder(app);
+            builder.DefaultHandler = new RouteHandler(async context => await context.Response.WriteAsync("You've entered rigth route"));
 
-            app.Map("/error", App =>
-     App.Run(async context =>
+            builder.MapRoute(
+                name: "default",
+                template: "{area}/{username}/{controller}/{action}",
+                constraints: new {
+                    username = new RequiredRouteConstraint(),
+                    area = new MaxLengthRouteConstraint(5)
+                },
+                defaults: new {
+                    controller = "Home",
+                    action = "index"
+                });
+            
+            
 
-     {
-     await context.Response.WriteAsync("Devided by zero exception occured!");
-
-
-
-          }
-         )
-);
-            app.UseStatusCodePages();
-            app.Use(async (context,_next)=> {
-                
-
-                await _next();
-                //context.Request.Path = "/error";
-
-            });
-
-            //app.UseStaticFiles();
-
-
-
+            app.UseRouter(builder.Build());
 
             app.Run(async (context) =>
             {
-                int x = 0;
-                x /= x;
                 await context.Response.WriteAsync("Hello World!");
-
-
-
             });
         }
     }

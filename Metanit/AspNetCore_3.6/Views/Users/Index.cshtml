@@ -1,0 +1,25 @@
+﻿@model AspNetCore_3._6.Controllers.User
+@{
+    Layout = null;
+}
+<!--THIS MY PERSONAL COMENT BEFO DOCTYPE-->
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+
+    <h2>@Model.Name.ToString()'s profile</h2>
+    <ul>
+        <li>@Html.DisplayNameFor(x => x.Id):@Html.DisplayFor(x => x.Id)</li>
+        <li>@Html.DisplayNameFor(x => x.Name):@Html.DisplayFor(x => x.Name)</li>
+        
+    </ul>    
+    
+
+
+</body>
+</html>

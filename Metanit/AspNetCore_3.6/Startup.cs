@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.AspNetCore.Routing;
 
-namespace AspNetCore_17._1
+namespace AspNetCore_3._6
 {
     public class Startup
     {
@@ -22,51 +22,30 @@ namespace AspNetCore_17._1
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
-            if (!env.IsDevelopment())
+            if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-                //app.UseExceptionHandler("/error.html");
-
-
             }
-            else
+
+            app.UseMvc(builder =>
             {
-                app.UseExceptionHandler("/error");
-            }
+                builder.MapRoute(
+                    name: "userprofile",
+                    template: "id/{username}",
+                    defaults: new { controller = "Users", action = "index" }
+                    );
 
-            app.Map("/error", App =>
-     App.Run(async context =>
-
-     {
-     await context.Response.WriteAsync("Devided by zero exception occured!");
-
-
-
-          }
-         )
-);
-            app.UseStatusCodePages();
-            app.Use(async (context,_next)=> {
-                
-
-                await _next();
-                //context.Request.Path = "/error";
+                builder.MapRoute(
+                    name: "default",
+                    template: "{controller}/{action}/{id?}",
+                    defaults: new { controller = "Home", action = "Index" }
+                    );
 
             });
 
-            //app.UseStaticFiles();
-
-
-
-
             app.Run(async (context) =>
             {
-                int x = 0;
-                x /= x;
                 await context.Response.WriteAsync("Hello World!");
-
-
-
             });
         }
     }
