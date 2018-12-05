@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.AspNetCore.Authentication;
 
 namespace AspNetCore_5._4
 {
@@ -48,6 +49,19 @@ namespace AspNetCore_5._4
                 app.UseHsts();
             }
 
+            app.Use(async (context,_next)=> {
+
+                await _next();
+
+                string controllerid = context.Items[5] as string;
+                if (String.IsNullOrEmpty(controllerid))
+                    controllerid = "notfound";
+                string output = (context.Response.ContentType ?? "Nothing") + Environment.NewLine
+                    + "StatusCode: " + context.Response.StatusCode + Environment.NewLine +
+                    "ControllerId: " + controllerid;
+                await context.Response.WriteAsync(output);
+            });
+
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();
@@ -55,8 +69,21 @@ namespace AspNetCore_5._4
             app.UseMvc(routes =>
             {
                 routes.MapRoute(
+                    name:"download",
+                    template:"download/{file}",
+                    defaults:new { controller="Download",action="GetFile"});
+
+                routes.MapRoute(
                     name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                    template: "{controller}/{action=Index}/{id?}",
+                    defaults: new { controller="Home"});
+
+                routes.MapRoute(
+                    name:"additional",
+                    template:"{action=index}/{id?}",
+                    defaults:new {controller="Home"}
+                    );
+
             });
         }
     }
