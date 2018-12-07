@@ -1,0 +1,47 @@
+﻿@model IEnumerable<MessageViewModel>
+@{
+    ViewData["Title"] = "Chat";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section Styles{ 
+
+    <style>
+        div.message-container {
+        background-color:antiquewhite;
+        padding:10px;
+        }
+        div.message{
+            
+            
+            margin-bottom:10px;
+            padding:5px;
+        }
+        div.message-body {
+            
+            
+        }
+        div.message-info p {
+            text-align:right;
+            font-size:x-small;
+            padding-left: 10px;
+            margin-bottom: 0px;
+        }
+
+    </style>
+
+
+}
+
+
+<h2>Chat</h2>
+
+<div class="message-container">
+
+    @foreach (var item in Model)
+    {
+        await Html.RenderPartialAsync("_Message", item);
+    }
+
+
+</div>
+

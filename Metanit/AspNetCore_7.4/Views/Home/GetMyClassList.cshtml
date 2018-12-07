@@ -1,0 +1,13 @@
+﻿@model IEnumerable<MyClass>
+@{
+    ViewData["Title"] = "GetMyClassList";
+    Layout = "~/Views/Home/_HomeMaster.cshtml";
+}
+
+<h2>GetMyClassList</h2>
+
+
+@foreach (var item in Model)
+{
+@Html.Partial("MyClassView", item)
+}
