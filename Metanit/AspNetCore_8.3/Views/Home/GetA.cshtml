@@ -1,0 +1,50 @@
+﻿
+@{
+    ViewData["Title"] = "GetA";
+}
+
+<h2>GetA</h2>
+
+<div>
+    <h2><a href="/GetAPost?name=Tom&Email=Flawles@mail.com">GO</a> GetA() by Query</h2>
+</div>
+<div>
+    <h2><a href="/GetAPost/Tom/Flawles@mail.com">GO</a> GetA() by routes (disabled)</h2>
+</div>
+<div>
+    <form mehod="get" asp-action="GetAPost">
+        <input hidden type="text" name="Name" value="Tom" />
+        <input hidden type="text" name="Email" value="Flawles@mail.com" />
+        <input type="submit" value="GO" />
+    </form>
+    
+    <h2>GetA() by form (prop names)</h2>
+    
+
+</div>
+<div>
+    <form mehod="get" asp-action="GetAPost">
+        <input hidden type="text" name="A.Name" value="Tom" />
+        <input hidden type="text" name="A.Email" value="Flawles@mail.com" />
+        <input type="submit" value="GO" />
+    </form>
+
+    <h2>GetA() by form (path syntax)</h2>
+
+
+</div>
+
+<div>
+    <form mehod="get" asp-action="GetAPost">
+        <input hidden type="text" name="A.Name" value="Tom" />
+        <input hidden type="text" name="A.Email" value="Flawles@mail.com" />
+        <input hidden type="text" name="col[0]" value="15" />
+        <input hidden type="text" name="col[2]" value="5" />
+        <input hidden type="text" name="col[1]" value="1" />
+        <input type="submit" value="GO" />
+    </form>
+
+    <h2>GetA() by form (path syntax)</h2>
+
+
+</div>
