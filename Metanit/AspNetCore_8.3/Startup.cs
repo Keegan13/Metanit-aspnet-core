@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Newtonsoft.Json;
 
 namespace AspNetCore_8._3
 {
@@ -40,17 +41,50 @@ namespace AspNetCore_8._3
             {
                 app.UseExceptionHandler("/Home/Error");
             }
+            app.UseWhen(x => x.Request.Path.StartsWithSegments("/getconfig"), App =>
+            {
 
-            app.UseStaticFiles();
-            
+                App.Run(async context =>
+                {
+                    var config = App.ApplicationServices.GetService<IConfiguration>();
+                    var stringCnf = JsonConvert.SerializeObject(config, Formatting.Indented);
+                    await context.Response.WriteAsync(stringCnf??"no config");
 
-            app.UseMvc(routes =>
+                });
+            });
+                
+
+            app.Use(next =>
+            {
+                return async context =>
+                {
+                    var config = app.ApplicationServices.GetService<IConfiguration>();
+                    if (config != null)
+                    {
+                        var connString = config.GetConnectionString("DefaultConnection")?.FirstOrDefault().ToString()??"no connection string";
+                        await context.Response.WriteAsync(connString);
+                    }
+                    else
+                        await next.Invoke(context);
+                };
+
+            });
+            app.UseStaticFiles().
+                UseMvc(routes =>
             {
                 routes.MapRoute(
                     name: "default",
                     template: "{action=Index}/{Name?}/{Email?}",
-                    defaults:new { controller = "Home" });
+                    defaults: new { controller = "Home" });
             });
+
         }
+
+
+
+
+
+
+
     }
 }

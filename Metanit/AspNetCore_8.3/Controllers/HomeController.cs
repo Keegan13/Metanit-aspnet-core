@@ -12,9 +12,14 @@ namespace AspNetCore_8._3.Controllers
 {
     public class A
     {
+        //binding by Name
         public string Name { get; set; }
+        //binding by Name
         public string Email { get; set; }
+        //binding by property path syntax e.g. "A.B.Name":"Tod"
         public B B { get; set; }
+
+        //collection binding
         public IEnumerable<int> col { get; set; }
     }
 
@@ -47,21 +52,22 @@ namespace AspNetCore_8._3.Controllers
 
         public IActionResult GetAPost(A a)
         {
+       
+
             var settings = new Newtonsoft.Json.JsonSerializerSettings
             {
                 Formatting = Newtonsoft.Json.Formatting.Indented,
 
             };
+            var result = "OBJECT" + Environment.NewLine + JsonConvert.SerializeObject(a, settings) + Environment.NewLine;
+             result += "QUERY:" + Environment.NewLine + JsonConvert.SerializeObject(Request.Query, settings) + Environment.NewLine;
 
-            var result = "QUERY:" + Environment.NewLine + JsonConvert.SerializeObject(Request.Query, settings) + Environment.NewLine;
 
-            if (Request.HasFormContentType)
-            {
                 result += "FORM" + Environment.NewLine + JsonConvert.SerializeObject(Request.Form, settings) + Environment.NewLine;
-            }
+            
 
             result += "ROUTE" + Environment.NewLine + JsonConvert.SerializeObject(RouteData, settings) + Environment.NewLine;
-            result += "OBJECT" + Environment.NewLine + JsonConvert.SerializeObject(a, settings) + Environment.NewLine;
+            
 
 
 

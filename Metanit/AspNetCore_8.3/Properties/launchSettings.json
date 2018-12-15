@@ -9,6 +9,7 @@
   },
   "profiles": {
     "IIS Express": {
+
       "commandName": "IISExpress",
       "launchBrowser": true,
       "environmentVariables": {
@@ -16,6 +17,9 @@
       }
     },
     "AspNetCore_8._3": {
+      "ConnectionStrings": {
+        "DefaultConnection": "Server=.;Database=main;Trusted_Connection=true"
+      },
       "commandName": "Project",
       "launchBrowser": true,
       "applicationUrl": "http://localhost:5000",

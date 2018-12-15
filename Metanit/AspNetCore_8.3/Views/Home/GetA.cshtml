@@ -2,14 +2,21 @@
 @{
     ViewData["Title"] = "GetA";
 }
+<style>
+    span{
+        font-size:10px;
+        
 
+    }
+
+</style>
 <h2>GetA</h2>
 
 <div>
-    <h2><a href="/GetAPost?name=Tom&Email=Flawles@mail.com">GO</a> GetA() by Query</h2>
+    <h2><a href="/GetAPost?name=Tom&Email=Flawles@mail.com">GO</a> GetA() by Query<span class="info">/GetAPost?name=Tom&Email=Flawles@mail.com</span></h2>
 </div>
 <div>
-    <h2><a href="/GetAPost/Tom/Flawles@mail.com">GO</a> GetA() by routes (disabled)</h2>
+    <h2><a href="/GetAPost/Tom/Flawles@mail.com">GO</a> GetA() by routes <span>/GetAPost/Tom/Flawles@mail.com</span></h2>
 </div>
 <div>
     <form mehod="get" asp-action="GetAPost">
@@ -44,7 +51,7 @@
         <input type="submit" value="GO" />
     </form>
 
-    <h2>GetA() by form (path syntax)</h2>
+    <h2>GetA() by form (with collection)</h2>
 
 
 </div>
