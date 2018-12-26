@@ -51,7 +51,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore_19.1", "AspNetCo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore_8.3", "AspNetCore_8.3\AspNetCore_8.3.csproj", "{6A45FDE4-54CC-4C64-B108-9CD936D98D47}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCore_10_4", "AspNetCore_10_4\AspNetCore_10_4.csproj", "{C62CDF08-2DA8-4476-BF85-C2F308D5FE25}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore_10_4", "AspNetCore_10_4\AspNetCore_10_4.csproj", "{C62CDF08-2DA8-4476-BF85-C2F308D5FE25}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeTagHelper", "CodeTagHelper\CodeTagHelper.csproj", "{2912895A-3576-40DF-AD17-1BB3E5657226}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -159,6 +161,10 @@ Global
 		{C62CDF08-2DA8-4476-BF85-C2F308D5FE25}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C62CDF08-2DA8-4476-BF85-C2F308D5FE25}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C62CDF08-2DA8-4476-BF85-C2F308D5FE25}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2912895A-3576-40DF-AD17-1BB3E5657226}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2912895A-3576-40DF-AD17-1BB3E5657226}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2912895A-3576-40DF-AD17-1BB3E5657226}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2912895A-3576-40DF-AD17-1BB3E5657226}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

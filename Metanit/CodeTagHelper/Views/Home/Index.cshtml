@@ -1,0 +1,25 @@
+﻿@addTagHelper *, CodeTagHelper
+@{
+    ViewData["Title"] = "Home Page";
+}
+<pre hljs-lang="cs">
+        public static class Name
+        {
+            public static void ToUpperFirst(this String str)
+            {
+                string buffer = str;
+                for (int i = 0; i & ltbuffer.Length; i++)
+                {
+                    if (buffer[i - 1] == " ")
+                        buffer[i].ToUpper();
+                }
+                str = buffer;
+            }
+        }
+</pre>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+
