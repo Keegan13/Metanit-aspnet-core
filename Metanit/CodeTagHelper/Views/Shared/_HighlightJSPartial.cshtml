@@ -1,0 +1,25 @@
+﻿@{
+}
+
+@section Styles
+{
+    <link rel="stylesheet" href="~/css/highlightjs/vs.css"/>
+}
+
+
+
+@section Scripts
+    {
+    <environment exclude="Development">
+        <script src="~/lib/HighlightJs/highlight.pack.js">hljs.initHighlightingOnLoad();
+        </script>
+    </environment>
+    <environment include="Development">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js"
+                asp-fallback-src="~/lib/HighlightJs/highlight.pack.js"
+                asp-fallback-test="hljs"
+                crossorigin="anonymous">
+            hljs.initHighlightingOnLoad();
+        </script>
+    </environment>
+}

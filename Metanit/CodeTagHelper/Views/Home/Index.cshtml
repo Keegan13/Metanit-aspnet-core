@@ -2,6 +2,10 @@
 @{
     ViewData["Title"] = "Home Page";
 }
+
+<link rel="stylesheet" href="~/css/highlightjs/vs.css" />
+
+
 <pre hljs-lang="cs">
         public static class Name
         {
@@ -18,8 +22,28 @@
         }
 </pre>
 
-<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js"></script>
-<script>hljs.initHighlightingOnLoad();</script>
 
 
 
+
+
+
+
+
+@section Scripts
+    {
+    @*<environment include="Development">
+        <script src="~/lib/HighlightJs/highlight.pack.js">
+
+        </script>
+    </environment*@>
+    <environment include="Development">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js"
+                asp-fallback-src="~/lib/HighlightJs/highlight.pack.js"
+                asp-fallback-test="window.hljs"
+                crossorigin="anonymous">
+        </script>
+
+    </environment>
+    <script>hljs.initHighlightingOnLoad();</script>
+}
