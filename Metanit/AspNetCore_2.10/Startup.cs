@@ -16,13 +16,13 @@ namespace AspNetCore_2._10
     public class Startup
     {
         //readonly ILogger _name;
-        readonly ILoggerFactory _logfact;
+        //readonly ILoggerFactory _logfact;
 
-        public Startup(ILoggerFactory factory)
-        {
-            //this._name = logger;
-            this._logfact = factory;
-        }
+        //public Startup(ILoggerFactory factory)
+        //{
+        //    //this._name = logger;
+        //    this._logfact = factory;
+        //}
             
         // This method gets called by the runtime. Use this method to add services to the container.
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
@@ -34,16 +34,17 @@ namespace AspNetCore_2._10
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
-           // this._logfact.AddConsole(LogLevel.Trace);
-            
+            // this._logfact.AddConsole(LogLevel.Trace);
+            var _logfact = app.ApplicationServices.GetService<ILoggerFactory>();
+            var loggefr = app.ApplicationServices.GetService<ILogger>();
 
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
             }
-            this._logfact.AddFile(Path.Combine(Directory.GetCurrentDirectory(),"Log.txt"));
+            _logfact.AddFile(Path.Combine(Directory.GetCurrentDirectory(),"Log.txt"));
 
-            var logger = this._logfact.CreateLogger("FileLogger");
+            var logger = _logfact.CreateLogger("FileLogger");
             _logfact.AddConsole(LogLevel.Debug);
             app.Run(async (context) =>
             {

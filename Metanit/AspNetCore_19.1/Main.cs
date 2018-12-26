@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace AspNetCore_19._1
+namespace AspNetCore_19._1.Controllers
 {
     public class Account
     {
@@ -21,6 +21,14 @@ namespace AspNetCore_19._1
         public string Email { get; set; }
         public Account LoopIn { get; set; }
 
+    }
+
+    public class TestController:Controller
+    {
+        public IActionResult Get()
+        {
+            return new RedirectResult("~/Account/getjson");
+        }
     }
 
     public class AccountController : Controller

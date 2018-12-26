@@ -49,7 +49,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore_30.1", "AspNetCo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore_19.1", "AspNetCore_19.1\AspNetCore_19.1.csproj", "{4C8C7EAD-C559-4F05-8EC0-FF11A050B63B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCore_8.3", "AspNetCore_8.3\AspNetCore_8.3.csproj", "{6A45FDE4-54CC-4C64-B108-9CD936D98D47}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCore_8.3", "AspNetCore_8.3\AspNetCore_8.3.csproj", "{6A45FDE4-54CC-4C64-B108-9CD936D98D47}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCore_10_4", "AspNetCore_10_4\AspNetCore_10_4.csproj", "{C62CDF08-2DA8-4476-BF85-C2F308D5FE25}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -153,6 +155,10 @@ Global
 		{6A45FDE4-54CC-4C64-B108-9CD936D98D47}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6A45FDE4-54CC-4C64-B108-9CD936D98D47}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6A45FDE4-54CC-4C64-B108-9CD936D98D47}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C62CDF08-2DA8-4476-BF85-C2F308D5FE25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C62CDF08-2DA8-4476-BF85-C2F308D5FE25}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C62CDF08-2DA8-4476-BF85-C2F308D5FE25}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C62CDF08-2DA8-4476-BF85-C2F308D5FE25}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

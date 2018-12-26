@@ -1,0 +1,43 @@
+﻿@model Phone
+@{
+    ViewData["Title"] = "AddPhone";
+}
+
+<h2>AddPhone</h2>
+
+<form asp-antiforgery="true" asp-action="Create" asp-controller="Home">
+    <div>
+        <div class="validation" asp-validation-summary="All"></div>
+        <div>
+
+            <label asp-for="Name"></label><br />
+            <input type="text" asp-for="Name" />
+            <span asp-validation-for="Name"></span>
+        </div>
+
+        <div>
+            <label asp-for="Price"></label><br />
+
+            <!--equivalent to <input asp-for="Price" />-->
+            <input name="Price" id="Price" type="number" 
+                   data-val="true" data-val-range="this is error message for failed range validation" data-val-range-min="10" data-val-range-max="50"
+                   >
+            <span asp-validation-for="Price"></span>
+        </div>
+        <div>
+            <label asp-for="CompanyId"></label><br />
+            <select asp-for="CompanyId" asp-items="ViewBag.Companies">
+                <option selected="selected" disabled="disabled">Выберите компанию</option>
+            </select>
+            <span asp-validation-for="CompanyId"></span>
+        </div>
+        <div>
+            <input type="submit" value="Save" />
+        </div>
+    </div>
+</form>
+
+@section scripts{
+    @Html.Partial("_ValidationScriptsPartial")
+
+}

@@ -62,7 +62,7 @@ namespace AspNetCore_8._3.Controllers
             var result = "OBJECT" + Environment.NewLine + JsonConvert.SerializeObject(a, settings) + Environment.NewLine;
              result += "QUERY:" + Environment.NewLine + JsonConvert.SerializeObject(Request.Query, settings) + Environment.NewLine;
 
-
+            if(Request.HasFormContentType)
                 result += "FORM" + Environment.NewLine + JsonConvert.SerializeObject(Request.Form, settings) + Environment.NewLine;
             
 

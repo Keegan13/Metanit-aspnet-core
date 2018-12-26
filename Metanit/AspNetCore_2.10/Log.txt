@@ -29,3 +29,13 @@ Processing request /
 24.11.2018 23:24:35 Processing request /favicon.ico from localhost:5000
 24.11.2018 23:26:16 Processing request / from localhost:5000
 24.11.2018 23:26:16 Processing request /favicon.ico from localhost:5000
+18.12.2018 21:42:24 Processing request / from localhost:5000
+18.12.2018 21:42:27 Processing request /favicon.ico from localhost:5000
+18.12.2018 21:43:42 Processing request / from localhost:5000
+18.12.2018 21:43:42 Processing request /favicon.ico from localhost:5000
+Request starting HTTP/1.1 GET http://localhost:5000/  
+18.12.2018 21:45:02 Processing request / from localhost:5000
+Request finished in 36.3143ms 200 
+Request starting HTTP/1.1 GET http://localhost:5000/favicon.ico  
+18.12.2018 21:45:02 Processing request /favicon.ico from localhost:5000
+Request finished in 25.0712ms 200 

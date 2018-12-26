@@ -39,7 +39,7 @@ namespace AspNetCore_8._3
             }
             else
             {
-                app.UseExceptionHandler("/Home/Error");
+                //app.UseExceptionHandler("/Views/Shared/Error.cshtml");
             }
             app.UseWhen(x => x.Request.Path.StartsWithSegments("/getconfig"), App =>
             {
@@ -54,28 +54,31 @@ namespace AspNetCore_8._3
             });
                 
 
-            app.Use(next =>
-            {
-                return async context =>
-                {
-                    var config = app.ApplicationServices.GetService<IConfiguration>();
-                    if (config != null)
-                    {
-                        var connString = config.GetConnectionString("DefaultConnection")?.FirstOrDefault().ToString()??"no connection string";
-                        await context.Response.WriteAsync(connString);
-                    }
-                    else
-                        await next.Invoke(context);
-                };
+            //app.Use(next =>
+            //{
+            //    return async context =>
+            //    {
+            //        var config = app.ApplicationServices.GetService<IConfiguration>();
+            //        if (config != null)
+            //        {
+            //            var connString = config["Myval"]?.ToString()??"fsadfs";
+            //            await context.Response.WriteAsync(connString);
+            //        }
+            //        else
+            //            await next.Invoke(context);
+            //    };
 
-            });
+            //});
             app.UseStaticFiles().
                 UseMvc(routes =>
             {
+                routes.MapRoute("native", "{controller}/{action}");
                 routes.MapRoute(
                     name: "default",
                     template: "{action=Index}/{Name?}/{Email?}",
                     defaults: new { controller = "Home" });
+
+               
             });
 
         }
